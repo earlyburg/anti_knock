@@ -1,0 +1,49 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the anti_knock module.
+ */
+
+/**
+ * Implements hook_schema().
+ *
+ * @see hook_schema()
+ * @ingroup anti_knock
+ */
+function anti_knock_schema() {
+  $schema['anti_knock_events'] = [
+    'description' => 'Storage for Anti-Knock events.',
+    'fields' => [
+      'id' => [
+        'type' => 'serial',
+        'not null' => TRUE,
+        'description' => 'Primary Key: Unique record ID.',
+      ],
+      'ip_address' => [
+        'type' => 'text',
+        'size' => 'medium',
+        'not null' => FALSE,
+        'description' => 'IP Address',
+      ],
+      'path' => [
+        'type' => 'text',
+        'size' => 'medium',
+        'not null' => FALSE,
+        'description' => 'Request Path',
+      ],
+      'created' => [
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+        'description' => 'Unix timestamp of the request.',
+      ],
+    ],
+    'unique keys' => [
+      'id' => ['id'],
+    ],
+    'primary key' => ['id'],
+  ];
+
+  return $schema;
+}

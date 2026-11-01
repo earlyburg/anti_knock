@@ -1,0 +1,8 @@
+anti_knock.config:
+  path: '/admin/config/anti_knock'
+  defaults:
+    _form: '\Drupal\anti_knock\Form\AntiKnockConfigForm'
+    _title: 'Anti-Knock Configuration'
+  requirements:
+    _permission: 'administer anti_knock'
+

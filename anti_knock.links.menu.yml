@@ -1,0 +1,7 @@
+anti_knock.admin:
+  title: 'Anti-Knock Configuration settings.'
+  description: 'Anti-Knock configuration settings'
+  parent: system.admin_config_system
+  route_name: anti_knock.config
+  weight: 100
+

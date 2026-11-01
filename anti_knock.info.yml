@@ -1,0 +1,7 @@
+name: Anti-Knock
+description: Automatically blocks requests intent on Directory Busting / Brute-Forcing attacks.
+package: Anti-Knock
+type: module
+core_version_requirement: ^10.3 || ^11 || ^12
+dependencies:
+  - ban:ban
