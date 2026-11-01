@@ -1,6 +1,6 @@
 # Anti-Knock
 
-Anti-Knock automatically blocks requests intent on Directory Busting / Brute-Forcing attacks using the functionality of the Drupal Ban module.
+Anti-Knock automatically blocks requests intent on Directory Busting / Denial Of Service attacks using the functionality of the Drupal Ban module.
 
 ## 🚀 Functionality
 
@@ -22,10 +22,10 @@ Anti-Knock automatically blocks requests intent on Directory Busting / Brute-For
    Click submit to save the configuration.
 
 ## 💻 Usage
-  Anti-Knock automatically blocks requests intent on Directory Busting / Brute-Forcing attacks using the functionality of the Ban module.
+  Anti-Knock automatically blocks requests intent on Directory Busting / Denial Of Service attacks using the functionality of the Ban module.
 Drupal's .htaccess file provides one layer of protection against 404 requests containing malicious patterns, but this does not usually stop more sophisticated probing.
 In general, an attacker may probe a site using this method looking for paths that might exist to help them profile an application.
-Besides being a nuisance and filling up the logs, getting accurate information about an applications structure can assist attackers in later stage DDOS attacks.
+Besides being a nuisance and filling up the logs, getting accurate information about an applications structure can assist attackers in later stage DOS attacks.
 Poorly constructed or malicious Bots or webspiders can also cause this problem.
 Requests to non-existent or expired paths to content can trigger this module to block an IP, so we recommend redirecting such paths appropriately.
 
