@@ -142,6 +142,13 @@ class AntiKnockConfigForm extends ConfigFormBase {
       '#placeholder' => $serverIp,
     ];
 
+    $form['settings']['optimize_db'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Optimize Anti-Knock database'),
+      '#description' => $this->t('Remove IP entries that have not reached the threshold.'),
+      '#default_value' => 0,
+    ];
+
     $form['banned_ips'] = [
       '#type' => 'details',
       '#title' => $this->t('Banned IPs'),
@@ -222,6 +229,18 @@ class AntiKnockConfigForm extends ConfigFormBase {
         $ip = str_replace('_', '.', $cleanKey);
         $this->detectorService->deleteIpEntries($ip);
         $this->detectorService->unbanIpEntry($ip);
+      }
+    }
+    // Optimize the Anti-Knock database.
+    if ($form_state->getValue('optimize_db') == 1) {
+      $ipArray = $this->database->select('anti_knock_events', 'n')
+        ->fields('n', ['ip_address'])
+        ->execute()
+        ->fetchCol();
+      foreach ($ipArray as $ip) {
+        if (!$this->detectorService->isThreshold($ip)) {
+          $this->detectorService->deleteIpEntries($ip);
+        }
       }
     }
     $config

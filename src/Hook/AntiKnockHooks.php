@@ -44,7 +44,7 @@ class AntiKnockHooks {
         $output .= '<div>' . $this->t('This module only blocks 404 requests from users who are not logged in. Logged-in users requests are not evaluated.') . '</div>';
         $output .= '<h3>' . $this->t('About') . '</h3>';
         $output .= '<div>' . $this->t('Anti-Knock automatically blocks requests intent on Directory Busting / Denial Of Service attacks using the functionality of the Drupal <a href="https://www.drupal.org/project/ban" target="_blank">Ban</a> module.') . '</div>';
-        $output .= '<div>' . $this->t('Drupal\'s .htaccess file provides one layer of protection against 404 requests containing malicious patterns, but this does not usually stop more sophisticated probing.') . '</div>';
+        $output .= '<div>' . $this->t('Drupals .htaccess file provides one layer of protection against 404 requests containing malicious patterns, but this does not usually stop more sophisticated probing.') . '</div>';
         $output .= '<div>' . $this->t('In general, an attacker may probe a site using this method looking for paths that might exist to help them profile an application.') . '</div>';
         $output .= '<div>' . $this->t('Besides being a nuisance and filling up the logs, getting accurate information about an applications structure can assist attackers in later stage DOS attacks.') . '</div>';
         $output .= '<div>' . $this->t('Poorly constructed or malicious Bots or webspiders can also cause this problem.') . '</div>';
