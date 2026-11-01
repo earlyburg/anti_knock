@@ -1,4 +1,4 @@
-# Anti_Knock
+# Anti-Knock
 
 Anti-Knock automatically blocks requests intent on Directory Busting / Brute-Forcing attacks using the functionality of the Drupal Ban module.
 
