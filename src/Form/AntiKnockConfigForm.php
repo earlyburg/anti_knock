@@ -149,7 +149,7 @@ class AntiKnockConfigForm extends ConfigFormBase {
 
     $form['settings']['optimize_db'] = [
       '#type' => 'checkbox',
-      '#title' => $this->t('Optimize Anti-Knock database'),
+      '#title' => $this->t('Optimize / Clean the Anti-Knock database'),
       '#description' => $this->t('Remove IP entries that have not reached the threshold.'),
       '#default_value' => 0,
     ];

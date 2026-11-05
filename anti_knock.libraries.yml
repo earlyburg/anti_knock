@@ -1,0 +1,6 @@
+anti_knock.library:
+  version: 1.0
+  css:
+    base:
+      css/anti_knock.css: {}
+
