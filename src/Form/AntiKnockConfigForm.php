@@ -122,7 +122,7 @@ class AntiKnockConfigForm extends ConfigFormBase {
       }
     }
     $bannedIps = array_unique($bannedIps);
-
+    $form['#attached']['library'][] = 'anti_knock/anti_knock.library';
     $form['settings'] = [
       '#type' => 'details',
       '#title' => $this->t('Anti-Knock Settings'),
