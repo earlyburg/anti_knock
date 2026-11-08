@@ -112,8 +112,10 @@ class AntiKnockConfigForm extends ConfigFormBase {
     $config = $this->config(static::AK_SETTINGS);
     $bannedIps = [];
     $serverIp = $_SERVER['SERVER_ADDR'] ?? gethostbyname($_SERVER['SERVER_NAME']);
+
     $ipArray = $this->database->select('anti_knock_events', 'n')
       ->fields('n', ['ip_address'])
+      ->orderBy('ip_address')
       ->execute()
       ->fetchCol();
     foreach ($ipArray as $ip) {
